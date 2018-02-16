@@ -18,6 +18,8 @@ class CategoryViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        loadCategories()
+        
     }
     
     //MARK: - TableView DataSource Methods
@@ -51,7 +53,6 @@ class CategoryViewController: UITableViewController {
             let newCategory = Category(context: self.context)
             newCategory.name = textField.text!
             self.categories.append(newCategory)
-            
             self.saveCategories()
             
         }
@@ -70,6 +71,7 @@ class CategoryViewController: UITableViewController {
     //MARK: - Data Manipulation Methods
     
     func saveCategories () {
+        
         do {
             try context.save()
         } catch {

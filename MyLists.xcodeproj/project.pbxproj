@@ -13,6 +13,7 @@
 		671EACB8203612DE000CDFEC /* MyLists.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 671EACB6203612DE000CDFEC /* MyLists.xcdatamodeld */; };
 		671EACBA203612DE000CDFEC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 671EACB9203612DE000CDFEC /* Assets.xcassets */; };
 		671EACBD203612DE000CDFEC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 671EACBB203612DE000CDFEC /* LaunchScreen.storyboard */; };
+		67312F7D2036A45500A4D0B4 /* CategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67312F7C2036A45500A4D0B4 /* CategoryViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		671EACB9203612DE000CDFEC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		671EACBC203612DE000CDFEC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		671EACBE203612DE000CDFEC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		67312F7C2036A45500A4D0B4 /* CategoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CategoryViewController.swift; path = MyLists/Controllers/CategoryViewController.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +87,7 @@
 		671EACC8203653A5000CDFEC /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				67312F7C2036A45500A4D0B4 /* CategoryViewController.swift */,
 				671EACB1203612DE000CDFEC /* ToDoListViewController.swift */,
 			);
 			path = Controllers;
@@ -171,6 +174,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				67312F7D2036A45500A4D0B4 /* CategoryViewController.swift in Sources */,
 				671EACB2203612DE000CDFEC /* ToDoListViewController.swift in Sources */,
 				671EACB8203612DE000CDFEC /* MyLists.xcdatamodeld in Sources */,
 				671EACB0203612DE000CDFEC /* AppDelegate.swift in Sources */,

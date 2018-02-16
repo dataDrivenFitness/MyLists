@@ -9,7 +9,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--MyLists-->
+        <!--Items-->
         <scene sceneID="Hyj-OA-79p">
             <objects>
                 <tableViewController id="32t-qU-8z9" customClass="ToDoListViewController" customModule="MyLists" customModuleProvider="target" sceneMemberID="viewController">
@@ -40,7 +40,7 @@
                             <outlet property="delegate" destination="32t-qU-8z9" id="Vv9-4e-XbV"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="MyLists" id="ibD-hn-l7X">
+                    <navigationItem key="navigationItem" title="Items" id="ibD-hn-l7X">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="k73-W5-xMT">
                             <color key="tintColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <connections>
@@ -51,7 +51,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="whO-bC-li2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="660" y="139"/>
+            <point key="canvasLocation" x="1366" y="139"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="M0k-8d-gcS">
@@ -68,12 +68,52 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="32t-qU-8z9" kind="relationship" relationship="rootViewController" id="5Zo-TK-xDJ"/>
+                        <segue destination="Z3E-pT-7ec" kind="relationship" relationship="rootViewController" id="dHc-Zd-XWb"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qjH-RV-GCC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-94" y="139"/>
         </scene>
+        <!--MyLIsts-->
+        <scene sceneID="HkH-kv-GVc">
+            <objects>
+                <tableViewController id="Z3E-pT-7ec" customClass="CategoryViewController" customModule="MyLists" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="8ga-Ux-omJ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="CategoryCell" id="w6L-Vl-myk">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="w6L-Vl-myk" id="vea-6K-0Nb">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="Z3E-pT-7ec" id="lD4-Gk-2qL"/>
+                            <outlet property="delegate" destination="Z3E-pT-7ec" id="6rm-RL-2A7"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="MyLIsts" id="OUu-va-Mbj">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="WUs-VA-ils">
+                            <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <connections>
+                                <action selector="addButtonPressed:" destination="Z3E-pT-7ec" id="PMb-0M-oAl"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <segue destination="32t-qU-8z9" kind="show" identifier="goToItems" id="eff-JB-PTD"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ReY-f2-md0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="638" y="139"/>
+        </scene>
     </scenes>
+    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
 </document>

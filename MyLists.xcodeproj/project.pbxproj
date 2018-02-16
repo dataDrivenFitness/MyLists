@@ -13,7 +13,6 @@
 		671EACB8203612DE000CDFEC /* MyLists.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 671EACB6203612DE000CDFEC /* MyLists.xcdatamodeld */; };
 		671EACBA203612DE000CDFEC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 671EACB9203612DE000CDFEC /* Assets.xcassets */; };
 		671EACBD203612DE000CDFEC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 671EACBB203612DE000CDFEC /* LaunchScreen.storyboard */; };
-		671EACC520365311000CDFEC /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 671EACC420365311000CDFEC /* Item.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,7 +24,6 @@
 		671EACB9203612DE000CDFEC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		671EACBC203612DE000CDFEC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		671EACBE203612DE000CDFEC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		671EACC420365311000CDFEC /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,7 +62,6 @@
 				671EACC720365399000CDFEC /* View */,
 				671EACC9203653E7000CDFEC /* Supporting Files */,
 				671EACBE203612DE000CDFEC /* Info.plist */,
-				671EACB6203612DE000CDFEC /* MyLists.xcdatamodeld */,
 			);
 			path = MyLists;
 			sourceTree = "<group>";
@@ -72,7 +69,7 @@
 		671EACC620365384000CDFEC /* Data Models */ = {
 			isa = PBXGroup;
 			children = (
-				671EACC420365311000CDFEC /* Item.swift */,
+				671EACB6203612DE000CDFEC /* MyLists.xcdatamodeld */,
 			);
 			path = "Data Models";
 			sourceTree = "<group>";
@@ -174,7 +171,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				671EACC520365311000CDFEC /* Item.swift in Sources */,
 				671EACB2203612DE000CDFEC /* ToDoListViewController.swift in Sources */,
 				671EACB8203612DE000CDFEC /* MyLists.xcdatamodeld in Sources */,
 				671EACB0203612DE000CDFEC /* AppDelegate.swift in Sources */,

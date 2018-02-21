@@ -9,7 +9,7 @@
 import UIKit
 import RealmSwift
 
-class ToDoListViewController: UITableViewController {
+class ToDoListViewController: SwipeTableViewController {
     
     var todoItems : Results<Item>?
     let realm = try! Realm()
@@ -24,8 +24,8 @@ class ToDoListViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        print(FileManager.default.urls(for: .documentDirectory, in: .userDomainMask))
-        
+        tableView.rowHeight = 80.0
+
     }
     
     
@@ -38,21 +38,19 @@ class ToDoListViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: "ToDoItemCell", for: indexPath)
+        let cell = super.tableView(tableView, cellForRowAt: indexPath)
         
         if let item = todoItems?[indexPath.row] {
             
-            cell.textLabel?.text = item.title
-            
-            //Turnary operator ==>
-            //Value = condition ? valueIfTrue : valueIfFalse
-            
+            cell.textLabel?.text = todoItems?[indexPath.row].title ?? "No items added yet"
             cell.accessoryType = item.done ? .checkmark : .none
+            cell.tintColor = UIColor.black
             
         } else {
+            
             cell.textLabel?.text = "No items added"
         }
-        
+
         return cell
         
     }
@@ -124,6 +122,20 @@ class ToDoListViewController: UITableViewController {
 
         todoItems = selectedCategory?.items.sorted(byKeyPath: "title", ascending: true)
         tableView.reloadData()
+    }
+    
+    //MARK - delete data from swipe
+    
+    override func updateModel(at indexPath: IndexPath) {
+        if let itemForDeletion = self.todoItems?[indexPath.row] {
+            do {
+                try self.realm.write {
+                    self.realm.delete(itemForDeletion)
+                }
+            } catch {
+                print("Error deleting items \(error)")
+            }
+        }
     }
 
 }

@@ -42,12 +42,14 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="Items" id="ibD-hn-l7X">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="k73-W5-xMT">
-                            <color key="tintColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <connections>
                                 <action selector="addButtonPressed:" destination="32t-qU-8z9" id="hCT-o3-vjj"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="searchBar" destination="z1v-Ff-0zS" id="7PI-9r-df1"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="whO-bC-li2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -58,15 +60,21 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="qfQ-ph-u2D" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Di4-ch-cyl">
-                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="Di4-ch-cyl">
+                        <rect key="frame" x="0.0" y="20" width="375" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="barTintColor" red="0.06038733571767807" green="0.65976905822753906" blue="0.85991257429122925" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <textAttributes key="titleTextAttributes">
                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </textAttributes>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="8VK-0a-FEp">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </toolbar>
                     <connections>
                         <segue destination="Z3E-pT-7ec" kind="relationship" relationship="rootViewController" id="dHc-Zd-XWb"/>
                     </connections>
@@ -75,7 +83,7 @@
             </objects>
             <point key="canvasLocation" x="-94" y="139"/>
         </scene>
-        <!--MyLIsts-->
+        <!--MyLists-->
         <scene sceneID="HkH-kv-GVc">
             <objects>
                 <tableViewController id="Z3E-pT-7ec" customClass="CategoryViewController" customModule="MyLists" customModuleProvider="target" sceneMemberID="viewController">
@@ -98,7 +106,7 @@
                             <outlet property="delegate" destination="Z3E-pT-7ec" id="6rm-RL-2A7"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="MyLIsts" id="OUu-va-Mbj">
+                    <navigationItem key="navigationItem" title="MyLists" id="OUu-va-Mbj">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="WUs-VA-ils">
                             <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <connections>
